@@ -1,70 +1,126 @@
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
-		<title>Cottage Shindigs</title>
+		<title>Understanding the Normal Distribution</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
-		<meta property="og:image" content="https://cottageshindigs.com/assets/images/pizza.svg"/>
+		<meta property="og:image" content="https://cottageshindigs.com/assets/images/logo.svg"/>
 		<meta property="og:image:width" content="100"/>
     	<meta property="og:image:height" content="100"/>
 		<meta property="og:description" content="Outdoor food and drinks most Thursdays!"/>
-		<link rel="shortcut icon" type="image/svg" href="assets/images/pizza.svg"/>
+		<link rel="shortcut icon" type="image/svg" href="assets/images/favicon.png"/>
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/visualization.css">
+		<script type="text/javascript" id="MathJax-script" async
+		  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+		</script>
 	</head>
 	<body>
+		<div id="home"></div>
 		<section class="section column-section section-bio">
 		<figure class="logo"></figure>
-			<p class="bio">Come join us for outdoor food and drinks most Thursdays at <a href="https://goo.gl/maps/Lrfrwq9nsgHkwSbj9">738 Frenchmans Road</a>.  All are welcome and feel free to bring others. If you wish, please Venmo a couple bucks to <i>@Daniel-Kunin</i> or bring something to barter so we can keep these shindigs going!</p>
+			<p class="bio">
+				<h1 class="bio">What makes the normal distribution <i>normal</i>?</h1>
+				The normal distribution is argubally...
+			</p>
 		</section>
 		<section class="section column-section-main">
 			<div class="col-section">
-				<h2 class="main-text">Upcoming shindigs</h2>
-				<dl class="list">
-					<dt class="main-text main-text-small">Thur - 12/2/21 (>7pm)</dt>
-					<dd class="list-item">
-						<p>Hanukkah Hullabaloo</p>
-					</dd>
-				</dl>
-				<!-- <dl class="list">
-					<dt class="main-text main-text-small">Thur - 12/9/21 (>7pm)</dt>
-					<dd class="list-item">
-						<p>Winter is coming</p>
-					</dd>
-				</dl> -->
+				<h2 class="main-text">A Gaussian Function</h2>
+				<p>Lets start by considering the PDF...</p>
+				$$f(x)={\frac {1}{\sigma {\sqrt {2\pi }}}}e^{-{\frac {1}{2}}\left({\frac {x-\mu }{\sigma }}\right)^{2}}$$
+				<p>\(\mu = \) <span id="mean">0</span></p>
+				<p>\(\sigma = \) <span id="std">0</span></p>
+				<p>The PDF is in the general form of a Gaussian function...</p>
+				$$f(x)=a\cdot \exp \left(-{\frac {(x-b)^{2}}{2c^{2}}}\right)$$
 			</div>
 			<div class="col-section">
-			  <h2 class="main-text">Oops, you missed it</h2>
-				<dl class="list">
-					<dt class="main-text main-text-small">Thur - 11/11/21 (>7pm)</dt>
-					<dd class="list-item">
-						<p>Never too early for Friendsgiving?</p>
-					</dd>
-					<dt class="main-text main-text-small">Sat - 10/30/21 (>4pm, till late)</dt>
-					<dd class="list-item">
-						<p>LET'S GET SPOOKY (costumes welcome)</p>
-					</dd>
-					<dt class="main-text main-text-small">Thur - 10/21/21 (>7pm)</dt>
-					<dd class="list-item">
-						<p>Delicious desserts (dinner not included)</p>
-					</dd>
-					<dt class="main-text main-text-small">Thur - 10/7/21 (>6pm)</dt>
-					<dd class="list-item">
-						<p>Shaked's dirty tacos & margs</p>
-					</dd>
-					<dt class="main-text main-text-small">Thur - 9/23/21 (>5pm)</dt>
-					<dd class="list-item">
-						<p>Al's famous pizza</p>
-					</dd>
-					<dt class="main-text main-text-small">Thur - 9/16/21 (>5pm)</dt>
-					<dd class="list-item">
-						<p>ICME Orientation</p>
-					</dd>
-				</dl>
+			  <div id="pdf"></div>
 			</div>
 		</section>
-		<footer class="footer main-text main-text-small">
+		<section class="section column-section-main">
+			<div class="col-section">
+				<h2 class="main-text">Differential Description</h2>
+				<p>The Gaussian function as a solution to the heat equation...</p>
+				$${\frac {\partial u}{\partial t}}={\frac {\partial ^{2}u}{\partial x_{1}^{2}}}+\cdots +{\frac {\partial ^{2}u}{\partial x_{n}^{2}}}$$
+				<div id="heat-control"></div>
+			</div>
+			<div class="col-section">
+			  <div id="heat"></div>
+			</div>
+		</section>
+		<section class="section column-section-main">
+			<div class="col-section">
+				<h2 class="main-text">Eigenfunction Description</h2>
+				<p>The Gaussian function as the eigenfunction of the Fourier transform...</p>
+				$$\hat{f}(\xi) =-\int _{-\infty }^{\infty }f(x)e^{-2\pi i x \xi}dx$$
+			</div>
+			<div class="col-section">
+			  <div id=""></div>
+			</div>
+		</section>
+		<section class="section column-section-main">
+			<div class="col-section">
+				<h2 class="main-text">Variational Description</h2>
+				<p>The Gaussian function as a solution to a energy-entropy maximization...</p>
+				$$H(X)=-\int _{-\infty }^{\infty }f(x)\log f(x)dx$$
+			</div>
+			<div class="col-section">
+			  <div id=""></div>
+			</div>
+		</section>
+		<section class="section column-section-main">
+			<div class="col-section">
+				<h2 class="main-text">Stochastic Description</h2>
+				<p>The Gaussian function as the limiting distribution of a stochastic process (Central Limit Theorem)...</p>
+				$${\sqrt {n}}\left({\bar {X}}_{n}-\mu \right)\ \xrightarrow {d} \ {\mathcal {N}}\left(0,\sigma ^{2}\right)$$
+				<div>
+                    <label for="sample">
+                        Sample size = <span id="sample-value">5</span>
+                    </label>
+                    <input id="sample" class="inputDist greenSlider" type="range" min="1" max="15" step="1" value="5">
+                    <!-- <br>
+                    <label for="draws">
+                        Draws = <span id="draws-value">1</span>
+                    </label>
+                    <input id="draws" class="inputDist greenSlider" type="range" min="1" max="50" step="1" value="1">
+                    
+                    <div class="form-group" >
+                        <label class="form-check">Theoretical
+                            <input class="form-check-input" id="theoretical" type="checkbox" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="button-1"  id="form_clt">Sample</div> -->
+                </div>
+			</div>
+			<div class="col-section">
+			  <div id="clt"></div>
+			</div>
+		</section>
+		<hr>
+		<section style="min-height: 100px">
+		</section>
+		<!-- <footer class="footer main-text main-text-small">
 			<a class="footer-links link-twitter" href="mailto:kunin@stanford.edu">Want to host an event?</a>
 			<div class="scrunch" aria-hidden="true"></div>
-		</footer>
+		</footer> -->
 	</body>
+	<script type="text/javascript" src="assets/js/d3.min.js"></script>
+	<script type="text/javascript" src="assets/js/math.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.js"></script>
+	
+	<script type="text/javascript" src="assets/js/home.js"></script>
+	<script type="text/javascript" src="assets/js/pdf.js"></script>
+
+	<script src="assets/js/heat/three/three.js"></script>
+	<script src="assets/js/heat/three/Detector.js"></script>
+	<script src="assets/js/heat/three/controls/OrbitControls.js"></script>
+	<script src="assets/js/heat/text.js"></script>
+	<script src="assets/js/heat/dat.gui.min.js"></script>
+	<script src="assets/js/heat/landscape.js"></script>
+
+	<script src="assets/js/clt/jstat.min.js"></script>
+	<script src="assets/js/clt/clt.js"></script>
 </html>

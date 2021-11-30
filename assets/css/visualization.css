@@ -1,0 +1,68 @@
+/* PDF */
+
+#curve-line {
+	stroke: #156289;
+	stroke-width: 5px;
+	fill: none;
+}
+
+#pdf {
+	cursor: crosshair;
+}
+
+.axis-grid {
+	opacity: 0.5;
+}
+
+/* Heat Eq*/
+#heat {
+	cursor: move;
+}
+
+/* CLT */
+#clt .axis path,
+#clt .axis line {
+	fill: none;
+	stroke: white;
+	stroke-width: 1;
+	shape-rendering: crispEdges;
+}
+
+#clt .axis text {
+	font-family: "Helvetica Neue";
+	font-size: 11px;
+	fill: white;
+}
+
+#clt #pdf {
+	fill: none;
+	stroke:	#F5D800;
+  	stroke-width: 5;
+}
+#clt #cdf {
+	fill: none;
+	stroke:	#FF8B22;
+  stroke-width: 5;
+}
+
+#clt #pdfArea {
+	fill: #F5D800;
+	opacity: 0.5;
+}
+
+#clt circle {
+  fill: #F5D800;
+}
+
+#clt .bar rect {
+  fill: #FF8B22;
+  fill-opacity: 0.5;
+}
+
+#clt .bar text {
+  fill: black;
+}
+
+.normal {
+	fill: #FF8B22;
+}

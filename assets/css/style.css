@@ -65,7 +65,7 @@ a:hover, a:focus {
 }
 
 .logo {
-	background: url('../../assets/images/pizza.svg') no-repeat;
+	background: url('../../assets/images/logo.png') no-repeat;
 	background-position: top left, top left;
 	background-repeat: no-repeat;
 	background-size: auto, auto 100%;
@@ -135,13 +135,17 @@ a:hover, a:focus {
 
 .col-section {
 	width: 100%;
-	max-width: 382px;
+	/*max-width: 382px;*/
 }
 
 @media (max-width: 600px) {
 	.col-section {
 		margin-bottom: 15vw;
 	}
+}
+
+h1.bio {
+	font-size: 30px;
 }
 
 .bio {
